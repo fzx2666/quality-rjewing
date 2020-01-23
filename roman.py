@@ -17,6 +17,8 @@ class ToRoman():
 
 
     def to_roman(self):
+        # we assert that the number is in range because we cannot represent
+        # numbers below 1 or above 3999
         assert(self.arabic_num > 0)
         assert(self.arabic_num < 4000)
         tmp = self.arabic_num
@@ -24,9 +26,9 @@ class ToRoman():
         roman = ""
         while tmp:
             digit = tmp // self.arabic[i] # this gets us the most significant digit
-            tmp %= self.arabic[i]
+            tmp %= self.arabic[i] # this removes the most significant digit for the next pass
 
-            roman += (self.roman[i] * digit)
+            roman += (self.roman[i] * digit) # this appends the desired number of roman numerals to the stirng
             i -= 1
 
         return roman
