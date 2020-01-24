@@ -28,3 +28,6 @@ def test_roman_wrong_input():
         to_roman(5.0)
     with pytest.raises(AssertionError):
         to_roman('ABCDEF')
+
+def test_should_fail():
+    assert False
