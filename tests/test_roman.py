@@ -2,7 +2,7 @@ import os, sys
 print(__file__)
 currentdir = os.path.dirname(__file__)
 parentdir = os.path.dirname(currentdir)
-sys.path.insert(0,parentdir) 
+sys.path.insert(0,parentdir)
 
 import pytest
 from roman import to_roman
@@ -29,5 +29,5 @@ def test_roman_wrong_input():
     with pytest.raises(AssertionError):
         to_roman('ABCDEF')
 
-def test_should_fail():
-    assert False
+# def test_should_fail():
+#     assert False
